@@ -1,0 +1,63 @@
+{
+  "name": "auto-path-script-executor",
+  "version": "0.0.1",
+  "description": "此擴充套件允許使用者透過右鍵點擊資料夾來選擇並執行 `package.json` 中定義的腳本。選定腳本後，擴充套件會自動將所在資料夾的相對路徑作為參數傳遞給腳本，便於在開發過程中快速且方便地執行與資料夾相關的腳本任務。",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/JiaHongL/auto-path-script-executor"
+  },
+  "icon": "images/icon.png",
+  "main": "./out/extension.js",
+  "license": "MIT",
+  "author": "JiaHongL",
+  "keywords": [
+    "auto path"
+  ],
+  "categories": [
+    "Other"
+  ],
+  "scripts": {
+    "vscode:prepublish": "npm run clean && npm run compile",
+    "clean": "rimraf out",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "postinstall": "node ./node_modules/vscode/bin/install",
+    "test": "npm run compile && node ./node_modules/vscode/bin/test",
+    "vsce:package": "npm run vscode:prepublish && npx vsce package"
+  },
+  "devDependencies": {
+    "@types/node": "^14.14.31",
+    "typescript": "^4.2.3",
+    "vscode": "^1.1.37",
+    "vscode-test": "^1.5.2"
+  },
+  "engines": {
+    "vscode": "^1.53.0"
+  },
+  "activationEvents": [
+    "onCommand:extension.autoPathScriptExecutor"
+  ],
+  "contributes": {
+    "commands": [
+      {
+        "command": "extension.autoPathScriptExecutor",
+        "title": "AutoPath Script Executor"
+      }
+    ],
+    "menus": {
+      "explorer/context": [
+        {
+          "command": "extension.autoPathScriptExecutor",
+          "when": "explorerResourceIsFolder"
+        }
+      ]
+    }
+  },
+  "dependencies": {
+    "rimraf": "^5.0.5",
+    "vsce": "^2.15.0"
+  },
+  "bugs": {
+    "url": "https://github.com/JiaHongL/auto-path-script-executor/issues"
+  }
+}

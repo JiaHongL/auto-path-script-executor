@@ -60,7 +60,7 @@
 
 ### 示範影片
   
-[VSCode 套件 - AutoPath Script Executor](https://www.youtube.com/watch?v=gGawwME1lMg)
+[VSCode 套件 - AutoPath Script Executor](https://www.youtube.com/watch?v=SE_r_5G2POk)
 
 ## License
 

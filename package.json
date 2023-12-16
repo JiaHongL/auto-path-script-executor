@@ -1,7 +1,9 @@
 {
   "name": "auto-path-script-executor",
+  "displayName": "AutoPath Script Executor",
   "version": "0.0.1",
   "description": "此擴充套件允許使用者透過右鍵點擊資料夾來選擇並執行 `package.json` 中定義的腳本。選定腳本後，擴充套件會自動將所在資料夾的相對路徑作為參數傳遞給腳本，便於在開發過程中快速且方便地執行與資料夾相關的腳本任務。",
+  "publisher": "JiaHongL",
   "repository": {
     "type": "git",
     "url": "https://github.com/JiaHongL/auto-path-script-executor"
